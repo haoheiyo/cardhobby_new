@@ -39,7 +39,7 @@ def get_item_info(itemid):
     return d
 
 
-def bidItemPrice(itemid, price, user):
+def bidItemPrice(itemid, price, user, img_url):
     url = 'http://www.cardhobby.com.cn/market/BidItemPrice'
     params = "itemid=%s&price=%s" % (itemid, price)
     # data={"itemid":"11822891",}

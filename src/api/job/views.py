@@ -25,11 +25,12 @@ def add_job():
     item_info = get_item_info(itemid)
     end_time = item_info['endtime']
     item_name = item_info['item_name']
+    img_url = item_info['img']
 
     logger.info('添加任务入参，itemid:%s,item_name:%s,price:%s,remaining_time:%s,end_time:%s', itemid, item_name, price,
                 remaining_time, end_time)
 
-    r = add(itemid, item_name, price, remaining_time, end_time)
+    r = add(itemid, item_name, price, remaining_time, end_time, img_url)
     if r:
         return result(HttpRes.SUCCESS_ADD_JOB)
     else:
